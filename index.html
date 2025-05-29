@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Niver tchola</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Feliz Aniversário Gabriel</h1>
+        <p>CHEGOU 21 </p>
+    </header>
+
+    <main class="gallery">
+
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="BOLO.jpg" alt="Cartão 1">
+            <h2>🎉 Feliz Niver Viado!</h2>
+            <button onclick="showMessage('Parabéns, Tchola! Que nunca te falte motivos pra sorrir, comemorar e ser feliz. Você é especial demais, gente boa de verdade, e merece um mundo cheio de amor, sucesso e rolês incríveis! 🎂🎈', 'gabriel1.jpg')">Ver Mensagem</button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="smile.jpg" alt="Cartão 2">
+            <h2>🎂 Tudo de booom!!</h2>
+            <button onclick="showMessage('Que todos os seus sonhos se realizem, que esse novo ciclo venha cheio de bênçãos, muita risada, saúde, amor e dinheiro no bolso (porque nunca é demais, né? 😎). Que nunca falte gente boa ao seu lado e motivos pra ser feliz.  🌟', 'GUS.jpg')">Ver Mensagem</button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="musical.jpg" alt="Cartão 3">
+            <h2>🥳 Curta pra Krl!</h2>
+            <button onclick="showMessage('Você é simplesmente diferenciado, peça rara, edição limitada... então nunca mude por ninguém, hein? Foi top demais te conhecer, sério, só vibe boa. Bora comemorar, que hoje o mundo é seu, gaizaum kkk! 🎁', 'gabriel2.jpg')">Ver Mensagem</button>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <img src="balão.jpg" alt="Cartão 4">
+            <h2>🌟 Um Dia Especial</h2>
+            <button onclick="showMessage('E é isso… finalmente 21! Agora tá liberado beber em qualquer canto do mundo sem medo de tomar enquadro internacional kkkkk 🍻🌍. Parabéns, você é brabo demais! Bora viver tudo que tem direito! 🎉🥳🔥', '21.jpg')">Ver Mensagem</button>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>© 2025 - HM produções 😎| Aniversário do Gaybs kkkkkk</p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="Imagem da Mensagem">
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    <script>
+        function showMessage(message, imageSrc) {
+            document.getElementById('modal-message').innerText = message;
+            document.getElementById('modal-image').src = imageSrc;
+            document.getElementById('modal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            let modal = document.getElementById('modal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
